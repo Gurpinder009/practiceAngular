@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-contact-me',
   template: `
     <p>
-      contact-me works!
+      sdfjas
     </p>
   `,
   styles: [
