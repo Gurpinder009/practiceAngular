@@ -1,14 +1,14 @@
 <nav class="navBar">
-    <span id="logo">
+    <span #nameRef id="logo">
         GSG009
     </span>
 
-    <div class="navLinks" id="navLink">
+    <div class="navLinks" id="navLink" #navLinkRef>
         <a class="link" routerLink="/home">Home</a>
         <a class="link" routerLink="/content">Content</a>
         <a class="link" routerLink="/contactme">Contact Me</a>
         <a class="link" routerLink="/about">About</a>
     </div>
-    <a class="icon" (click)="menuBar()"><i class="fa fa-bars"></i></a>
+    <a class="icon" (click)="handleBar()"><i class="fa fa-bars"></i></a>
 
 </nav>

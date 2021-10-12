@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
-export class AppComponent {
-  title = 'app';
+export class AppComponent implements OnInit,OnDestroy {
+  title: string;
+  variable1:string;
+
+  constructor() {
+    this.title = "app";
+    this.variable1="gurpinder";
+    
+  }
+
+  ngOnInit(){
+    
+  }
+
+  ngOnDestroy(){
+  
+  }
+
+
+
 }

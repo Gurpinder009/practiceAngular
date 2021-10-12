@@ -1,24 +1,34 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements AfterViewInit {
+  // @ViewChild('nameRef') nameElementRef:ElementRef ;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  @ViewChild('navLinkRef') navLinkElementRef:ElementRef;
+  
+  constructor() { 
+    
+    
   }
 
-  menuBar(){
-    let x = document.getElementById('navLink')
-    if(x?.style.display == "")
-      x.style.display = "flex";
+  ngAfterViewInit(){
+  //   console.log(this.nameElementRef.nativeElement.innerHTML);
+  //   this.nameElementRef.nativeElement.style.color="yellow";
+  }
+
+  handleBar(){
+    let x =this.navLinkElementRef.nativeElement.style;
+    if( x.display === "")
+      x.display = "flex";
     else
-      if(x?.style.display)
-        x.style.display = ""
+      x.display = "";
+    
   }
+
+ 
 
 }
